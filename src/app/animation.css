@@ -1,0 +1,11 @@
+#header {
+    border-right: 1px solid white;
+    animation: typing 4s steps(100, end);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    0% { width: 0% }
+    100% {width: 100% }
+}
