@@ -1,6 +1,9 @@
 #header {
+    position: relative;
+    width: max-content;
+    margin: 1em auto auto auto  ;
     border-right: 1px solid white;
-    animation: typing 4s steps(100, end);
+    animation: typing 6s steps(100, end), blink 0.7s step-end infinite;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -8,4 +11,8 @@
 @keyframes typing {
     0% { width: 0% }
     100% {width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
 }

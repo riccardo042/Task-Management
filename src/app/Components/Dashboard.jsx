@@ -56,7 +56,7 @@ export default function Dashboard() {
     return (
         <div id="dashboard" className="flex-col items-center gap-y-5 size-full">
         <h1
-        className="mt-5 text-5xl text-center">Task Managements App</h1>
+        className="mt-5 text-4xl text-center italic mr-15" id="header">Task Managements App</h1>
         <div id="new-task-div" className="flex justify-center items-center space-x-1">
         <Input
         value={newTask}
@@ -68,7 +68,7 @@ export default function Dashboard() {
         <Button
         onClick={() => newTask.trim() && handleAdd(newTask)}
         disabled={!newTask.trim()}
-        className="hover:bg-cyan-400"
+        className="bg-blue-400 hover:bg-blue-600"
         >
         <Plus />
         Add Task
@@ -138,13 +138,12 @@ const Task = ({ text, onComplete, onRemove, onUncomplete, showComplete, isComple
 
 const TaskCard = ({ type, children, tasks }) => {
     return (
-        <UICard className="w-96">
+        <UICard className="w-96 mb-4">
             <CardHeader>
                 <CardTitle>
-                 {type}
-                 <br />
-                 <span>
-                    {tasks.length} {tasks.length === 1 ? "task" : "tasks"}
+                 <p>{type}</p>
+                 <span className="font-medium" >
+                    {tasks.length} {tasks.length <= 1 ? "task" : "tasks"}
                  </span>   
                 </CardTitle>
             </CardHeader>
